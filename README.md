@@ -163,11 +163,11 @@ python -m pytest tests/ -v
 
 ### Streamlit Dashboard
 
-![Dashboard](outputs/figures/10_dashboard.png)
+![Heatmap](outputs/figures/10_correlation_heatmap.png)
 
 ### Forecast
 
-![Forecast](outputs/figures/09_rain_forcast.png)
+![Forecast](outputs/figures/09_rain_forecast.png)
 
 ---
 
