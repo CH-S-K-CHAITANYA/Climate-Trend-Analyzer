@@ -79,7 +79,7 @@ Climate-Trend-Analyzer/
 ├── app/ # Streamlit dashboard
 ├── outputs/ # Generated figures, tables, reports
 ├── tests/ # Unit tests
-├── images/ # Screenshots for README
+├── outputs/figures/ # Screenshots for README
 ├── main.py # Full pipeline runner
 └── requirements.txt
 ```
@@ -155,19 +155,19 @@ python -m pytest tests/ -v
 
 ### Temperature Trend
 
-![Temperature Trend](images/04_temp_trend.png)
+![Temperature Trend](outputs/figures/01_temperature_trend.png)
 
 ### Anomaly Detection
 
-![Anomaly Detection](images/08_anomaly_chart.png)
+![Anomaly Detection](outputs/figures/05_anomaly_detection.png)
 
 ### Streamlit Dashboard
 
-![Dashboard](images/10_dashboard.png)
+![Heatmap](outputs/figures/10_correlation_heatmap.png)
 
 ### Forecast
 
-![Forecast](images/09_forecast_chart.png)
+![Forecast](outputs/figures/09_rain_forecast.png)
 
 ---
 
