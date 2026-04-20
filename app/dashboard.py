@@ -25,39 +25,25 @@ st.set_page_config(
 # ── CSS Styling ───────────────────────────────────────────────────────────────
 # ── CSS Styling ───────────────────────────────────────────────────────────────
 st.markdown("""
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-    /* Use native theme variables for text to automatically adapt to light/dark mode */
-    .main-title {
-        font-size: 3.5rem; /* Increased from 2.5rem */
-        font-weight: 800; 
-        color: var(--text-color); 
-        margin-bottom: 0rem; 
-        padding-bottom: 0rem;
+    :root {
+        --bg-primary: #080c14; --bg-secondary: #0d1526; --bg-card: #111827;
+        --teal: #00d4aa; --teal-dim: rgba(0, 212, 170, 0.12); --teal-glow: 0 0 24px rgba(0, 212, 170, 0.25);
+        --text-primary: #f0f6ff; --text-secondary: #94a3b8; --font-main: 'Space Grotesk', sans-serif;
     }
-    .subtitle {
-        font-size: 1.4rem; /* Increased from 1.1rem */
-        color: var(--text-color); 
-        opacity: 0.7; 
-        margin-top: 0.5rem; 
-        margin-bottom: 2rem;
+    html, body, [data-testid="stAppViewContainer"] {
+        background: radial-gradient(ellipse 80% 50% at 20% 0%, rgba(0,212,170,0.06) 0%, transparent 60%), var(--bg-primary) !important;
+        color: var(--text-primary) !important; font-family: var(--font-main) !important;
     }
-    
-    /* Make the metric cards look like clickable modern widgets (Adaptive) */
-    [data-testid="metric-container"] {
-        background-color: var(--secondary-background-color);
-        border: 1px solid rgba(128, 128, 128, 0.2);
-        border-radius: 12px;
-        padding: 1rem 1.5rem;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    [data-testid="metric-container"]:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 6px rgba(0,0,0,0.4);
-    }
+    [data-testid="stSidebar"] { background: var(--bg-secondary) !important; border-right: 1px solid rgba(0,212,170,0.1) !important; }
+    [data-testid="stTabs"] [role="tablist"] { background: var(--bg-card) !important; border: 1px solid rgba(0,212,170,0.1) !important; border-radius: 10px; padding: 4px; }
+    [data-testid="stTabs"] [role="tab"][aria-selected="true"] { background: var(--teal-dim) !important; color: var(--teal) !important; border: 1px solid rgba(0,212,170,0.4) !important; }
+    [data-testid="stMetric"] { background: var(--bg-card); border: 1px solid rgba(0,212,170,0.1); border-radius: 12px; padding: 15px; }
+    /* Hide Default Chrome */
+    #MainMenu, footer, header, [data-testid="stToolbar"] { display: none !important; }
 </style>
 """, unsafe_allow_html=True)
-
 
 @st.cache_data
 def load_data():
